@@ -107,7 +107,7 @@ class SentimentDataset(Dataset):
         return len(self.x)
     
     def __getitem__(self, idx):
-        return torch.tensor(self.x[idx]), torch.tensor(self.y[idx])
+        return torch.tensor(self.x[idx]), torch.tensor(self.y[idx]).type(torch.int64)
 
 def get_dataloader(x, y, batch_size=32):
     dataset = SentimentDataset(x, y)
