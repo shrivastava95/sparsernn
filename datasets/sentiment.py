@@ -7,15 +7,8 @@ from nltk.corpus import stopwords
 import re
 import pandas as pd
 
-batch_size = 32
-train_ratio = 0.8
-
-
-dataset = pd.read_csv('./IMDB Dataset.csv', encoding='latin-1')
-stop_words = set(stopwords.words('english'))
-dataset = dataset[[len(sentence) <= 2500 for sentence in dataset['review']]]
-
 def clean_string(s):
+    stop_words = set(stopwords.words('english'))
     s= re.sub(r"[^\w\s]",'',s)
 
     s= re.sub(r"\d",'',s)
@@ -61,6 +54,7 @@ def word_token_seprator(data):
     
     return x, y
 
+
 def word_to_token(dataset,language):
   
     dataset_token = []
@@ -85,6 +79,7 @@ def pad_dataset(dataset,language,left_padding=True):
     return dataset
 
 
+
 def create_dataset(dataset):
     x = []
     y = []
@@ -102,7 +97,6 @@ def create_dataset(dataset):
 
     return x, y, input_lang
 
-x, y, input_lang= create_dataset(dataset)
 
 class SentimentDataset(Dataset):
     def __init__(self, x, y):
@@ -120,10 +114,9 @@ def get_dataloader(x, y, batch_size=32):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     return dataloader
 
-def get_train_test_dataloader(x, y, batch_size=batch_size, test_size=1-train_ratio):
+def get_train_test_dataloader(dataset, batch_size=32, test_size=0.2):
+    x, y, input_lang = create_dataset(dataset)
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=test_size)
     train_dataloader = get_dataloader(x_train, y_train, batch_size=batch_size)
     test_dataloader = get_dataloader(x_test, y_test, batch_size=batch_size)
-    return train_dataloader, test_dataloader
-
-train_dataloader, test_dataloader = get_train_test_dataloader(x, y, batch_size=32, test_size=0.2)
+    return train_dataloader, test_dataloader, input_lang,None

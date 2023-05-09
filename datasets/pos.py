@@ -5,22 +5,6 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 from nltk.corpus import treebank, brown, conll2000
 
-nltk.data.path.append(os.getcwd())
-nltk.download('treebank', download_dir=os.getcwd())
-nltk.download('brown', download_dir=os.getcwd())
-nltk.download('conll2000', download_dir=os.getcwd())
-
-train_ratio = 0.8
-batch_size = 32
-
-treebank_data = treebank.tagged_sents()
-brown_data = brown.tagged_sents()
-conll2000_data = conll2000.tagged_sents()
-
-dataset = treebank_data + brown_data + conll2000_data
-
-dataset = [sentence for sentence in dataset if len(sentence) <= 50]
-
 class Language:
     def __init__(self, name):
         self.name = name
@@ -99,7 +83,7 @@ def create_dataset(data):
 
     return x, y, input_lang, output_lang
 
-x, y, input_lang, output_lang = create_dataset(dataset)
+
     
 class POSDataset(Dataset):
     def __init__(self, x, y):
@@ -117,10 +101,9 @@ def get_dataloader(x, y, batch_size=32):
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     return dataloader
 
-def get_train_test_dataloader(x, y, batch_size=32, test_size=0.2):
+def get_train_test_dataloader(dataset, batch_size=32, test_size=0.2):
+    x, y, input_lang, output_lang = create_dataset(dataset)
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=test_size)
     train_dataloader = get_dataloader(x_train, y_train, batch_size=batch_size,)
     test_dataloader = get_dataloader(x_test, y_test, batch_size=batch_size,)
-    return train_dataloader, test_dataloader
-
-train_dataloader, test_dataloader = get_train_test_dataloader(x, y, batch_size=batch_size, test_size=0.2)
+    return train_dataloader, test_dataloader, input_lang, output_lang
