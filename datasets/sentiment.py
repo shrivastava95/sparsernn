@@ -127,4 +127,3 @@ def get_train_test_dataloader(x, y, batch_size=batch_size, test_size=1-train_rat
     return train_dataloader, test_dataloader
 
 train_dataloader, test_dataloader = get_train_test_dataloader(x, y, batch_size=32, test_size=0.2)
-
