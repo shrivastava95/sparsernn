@@ -43,6 +43,7 @@ def main(args):
     for epoch in range(args.epochs):
         for sequences, labels in tqdm(train_loader):
             labels = labels.to(device)
+            sequences = sequences.to(device)
             scores = model(sequences)[:, -1]
             loss = criterion(scores, labels)
             optimizer.zero_grad()
@@ -83,7 +84,7 @@ if __name__ == '__main__':
 
     #models
     parser.add_argument('--model', default='sparsernn', choices=['sparsernn','rnn','sparsernn_seqtoseq','rnn_seqtoseq'])
-    parser.add_argument('--maxsize', default=512, type=int)           # maximum sequence length to which sequences are padded.
+    parser.add_argument('--maxsize', type=int)           # maximum sequence length to which sequences are padded.
     parser.add_argument('--embedding_dims', default=64, type=int)     # embedding size for the model internals
 
     #optimization
@@ -96,6 +97,7 @@ if __name__ == '__main__':
     #misc
     parser.add_argument('--seed', default=0, type=int)
     parser.add_argument('--cycles',default=None,type=str)
+    parser.add_argument('--yaml', default=None, type=str)
 
     args = parser.parse_args()
 

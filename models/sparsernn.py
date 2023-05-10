@@ -56,6 +56,7 @@ class SparseRNN(nn.Module):
   def forward(self, x):
     cache = []
     x = self.embedder(x)
+    print(x.shape)
     batch_size = x.shape[0]
     # print(batch_size)
     hidden_input_stacks = []
