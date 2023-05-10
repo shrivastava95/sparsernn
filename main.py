@@ -74,6 +74,8 @@ def main(args):
             # if i == 0:
             #     print(scores, labels)
             loss = criterion(scores, labels)
+            if loss.item() > 1:
+                continue
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
