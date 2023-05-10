@@ -76,9 +76,9 @@ def main(args):
                 if loss.item() > 1:
                     continue
             elif args.dataset == 'pos':
-                scores = model(sequences)
-                preds = scores.argmax(dim=1).reshape([preds.shape[0], -1])
-                scores = scores.reshape([scores.shape[0], -1])
+                labels = labels.reshape9([-1])
+                scores = model(sequences).reshape([-1, 2])
+                preds = scores.argmax(dim=1)
                 correct = int(sum(preds == labels))
                 total = int(labels.shape[0])
                 accuracy = float(correct / total) * 100
@@ -103,16 +103,28 @@ def main(args):
         for i, (sequences, labels) in enumerate(tqdm(test_loader)):
             labels = labels.to(device)
             sequences = sequences.to(device)
-            scores = model(sequences)[:, -1]
-            preds = scores.argmax(dim=1)
-            correct = int(sum(preds == labels))
-            total = int(labels.shape[0])
-            accuracy = float(correct / total) * 100
-            loss = criterion(scores, labels).detach().item()
-            size = labels.shape[0]
-            test_accuracies.append(accuracy)
-            test_losses.append(loss)
-            test_sizes.append(size)
+            if args.dataset == 'sentiment':
+                scores = model(sequences)[:, -1]
+                preds = scores.argmax(dim=1)
+                correct = int(sum(preds == labels))
+                total = int(labels.shape[0])
+                accuracy = float(correct / total) * 100
+                loss = criterion(scores, labels).detach().item()
+                size = labels.shape[0]
+                test_accuracies.append(accuracy)
+                test_losses.append(loss)
+                test_sizes.append(size)
+            elif args.dataset == 'pos':
+                scores = model(sequences)
+                preds = scores.argmax(dim=1)
+                correct = int(sum(preds == labels))
+                total = int(labels.shape[0])
+                accuracy = float(correct / total) * 100
+                loss = criterion(scores, labels).detach().item()
+                size = labels.shape[0]
+                test_accuracies.append(accuracy)
+                test_losses.append(loss)
+                test_sizes.append(size)
     
         test_accuracies = np.array(test_accuracies)
         test_losses = np.array(test_losses)
