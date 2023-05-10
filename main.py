@@ -15,7 +15,7 @@ type_scheduler = 'warmup'
 
 def main(args):
     #set up gpu
-    hidden_state_sizes = [512, 128] if args.dataset == 'sentiment' else [256, 128]
+    hidden_state_sizes = [512, 128] if args.dataset == 'sentiment' else [512, 128]
 
     if torch.cuda.is_available():
         device = torch.device('cuda')
@@ -47,12 +47,12 @@ def main(args):
 
     wandb.init(
         project="DL PROJECT",
-        name = "SparseRNN Sentiment",
+        name = f"SparseRNN {args.dataset.capitalize()}",
         config = {
             "epochs": args.epochs,
             "batch_size": args.batch_size,
             "embedding_dims": args.embedding_dims,
-            "hidden_state_sizes": [512, 128],
+            "hidden_state_sizes": hidden_state_sizes,
             "depth": len(hidden_state_sizes),
         },
         settings=wandb.Settings(start_method="thread")
@@ -66,16 +66,24 @@ def main(args):
         for i, (sequences, labels) in enumerate(tqdm(train_loader)):
             labels = labels.to(device)
             sequences = sequences.to(device)
-            scores = model(sequences)[:, -1]
-            preds = scores.argmax(dim=1)
-            correct = int(sum(preds == labels))
-            total = int(labels.shape[0])
-            accuracy = float(correct / total) * 100
-            # if i == 0:
-            #     print(scores, labels)
-            loss = criterion(scores, labels)
-            if loss.item() > 1:
-                continue
+            if args.dataset == 'sentiment':
+                scores = model(sequences)[:, -1]
+                preds = scores.argmax(dim=1)
+                correct = int(sum(preds == labels))
+                total = int(labels.shape[0])
+                accuracy = float(correct / total) * 100
+                loss = criterion(scores, labels)
+                if loss.item() > 1:
+                    continue
+            elif args.dataset == 'pos':
+                scores = model(sequences)
+                preds = scores.argmax(dim=1).reshape([preds.shape[0], -1])
+                scores = scores.reshape([scores.shape[0], -1])
+                correct = int(sum(preds == labels))
+                total = int(labels.shape[0])
+                accuracy = float(correct / total) * 100
+                loss = criterion(scores, labels)
+
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
@@ -87,9 +95,6 @@ def main(args):
                 scheduler.step()
             elif type_scheduler == 'cosine':
                 scheduler.step(epoch + i / len(train_loader))
-        # plt.plot(losses)
-        # plt.title(f'train losses uptil end of epoch {epoch+1}')
-        # plt.show()
 
         model.eval()
         test_accuracies = []
