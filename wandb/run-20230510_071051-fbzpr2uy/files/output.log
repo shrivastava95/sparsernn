@@ -1,0 +1,24 @@
+  0%|                                                                                                                                                                                     | 0/1117 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 159, in <module>
+    main(args)
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 62, in main
+    for i, (sequences, labels) in enumerate(tqdm(train_loader)):
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\tqdm\std.py", line 1178, in __iter__
+    for obj in iterable:
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\dataloader.py", line 634, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\dataloader.py", line 678, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\utils\data\_utils\fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+            ~~~~~~~~~~~~^^^^^
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\datasets\sentiment.py", line 110, in __getitem__
+    return torch.tensor(self.x[idx]), torch.tensor(self.y[idx].reshape([-1])).long()
+                                                   ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'reshape'

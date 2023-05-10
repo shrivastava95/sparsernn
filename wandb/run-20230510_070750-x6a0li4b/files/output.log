@@ -1,0 +1,8 @@
+  0%|                                                                                                                                                                                     | 0/1117 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 159, in <module>
+    main(args)
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 70, in main
+    print(loss.item(), scores, labels)
+          ^^^^
+UnboundLocalError: cannot access local variable 'loss' where it is not associated with a value

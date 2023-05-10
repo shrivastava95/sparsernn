@@ -1,0 +1,9 @@
+
+  0%|                                                                                                                                                                                     | 0/1117 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 159, in <module>
+    main(args)
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 66, in main
+    correct = int(sum(scores.argmax(dim=1) == labels.argmax(dim=1)))
+                                              ^^^^^^^^^^^^^^^^^^^^
+IndexError: Dimension out of range (expected to be in range of [-1, 0], but got 1)

@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-05-10T01:37:05.330055",
+    "startedAt": "2023-05-10T01:37:04.217657",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\ai_sem_7\\Courses\\Deep Learning\\deep-learning\\project\\sparsernn\\main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/shrivastava95/sparsernn.git",
+        "commit": "c5d607afacb0a78f19f9e41f2f832006410675f1"
+    },
+    "email": "shrivastava.9@iitj.ac.in",
+    "root": "C:/ai_sem_7/Courses/Deep Learning/deep-learning/project/sparsernn",
+    "host": "ishaan",
+    "username": "ishaa",
+    "executable": "C:\\Users\\ishaa\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2566.0,
+        "min": 0.0,
+        "max": 3201.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2566.0,
+            "min": 0.0,
+            "max": 3201.0
+        }
+    ],
+    "disk": {
+        "total": 456.83202743530273,
+        "used": 415.36193084716797
+    },
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.237815856933594
+    }
+}

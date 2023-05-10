@@ -1,0 +1,50 @@
+wandb_version: 1
+
+epochs:
+  desc: null
+  value: 20
+batch_size:
+  desc: null
+  value: 32
+embedding_dims:
+  desc: null
+  value: 64
+hidden_state_sizes:
+  desc: null
+  value:
+  - 512
+  - 128
+depth:
+  desc: null
+  value: 2
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.3
+    cli_version: 0.15.2
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1683682851.670809
+    t:
+      1:
+      - 1
+      - 5
+      - 51
+      - 53
+      - 55
+      2:
+      - 1
+      - 5
+      - 51
+      - 53
+      - 55
+      3:
+      - 13
+      - 16
+      - 23
+      4: 3.11.3
+      5: 0.15.2
+      8:
+      - 3
+      - 8

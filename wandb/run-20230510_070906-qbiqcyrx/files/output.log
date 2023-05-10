@@ -1,0 +1,81 @@
+
+  0%|                                                                                                                                                                                     | 0/1117 [00:00<?, ?it/s]
+tensor([[0.0365, 0.0887],
+        [0.0402, 0.0841],
+        [0.0490, 0.0985],
+        [0.0326, 0.0831],
+        [0.0529, 0.0729],
+        [0.0499, 0.0853],
+        [0.0385, 0.0844],
+        [0.0364, 0.0613],
+        [0.0546, 0.0788],
+        [0.0562, 0.0610],
+        [0.0445, 0.0912],
+        [0.0408, 0.0935],
+        [0.0457, 0.0826],
+        [0.0411, 0.0925],
+        [0.0356, 0.0772],
+        [0.0518, 0.0844],
+        [0.0497, 0.0704],
+        [0.0473, 0.0732],
+        [0.0226, 0.0874],
+        [0.0465, 0.0780],
+        [0.0590, 0.0850],
+        [0.0267, 0.0441],
+        [0.0526, 0.0648],
+        [0.0469, 0.0605],
+        [0.0530, 0.0659],
+        [0.0331, 0.0760],
+        [0.0464, 0.0874],
+        [0.0335, 0.0900],
+        [0.0372, 0.0792],
+        [0.0508, 0.0884],
+        [0.0369, 0.0694],
+        [0.0353, 0.0914]], device='cuda:0', grad_fn=<SelectBackward0>) tensor([[0],
+        [0],
+        [0],
+        [1],
+        [0],
+        [0],
+        [1],
+        [0],
+        [0],
+        [0],
+        [1],
+        [1],
+        [1],
+        [1],
+        [1],
+        [0],
+        [0],
+        [0],
+        [1],
+        [0],
+        [1],
+        [0],
+        [1],
+        [0],
+        [0],
+        [0],
+        [0],
+        [1],
+        [0],
+        [1],
+        [0],
+  0%|                                                                                                                                                                                     | 0/1117 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 159, in <module>
+    main(args)
+  File "c:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\main.py", line 71, in main
+    loss = criterion(scores, labels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\loss.py", line 1174, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ishaa\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\functional.py", line 3029, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: 0D or 1D target tensor expected, multi-target not supported

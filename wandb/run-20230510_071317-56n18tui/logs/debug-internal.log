@@ -1,0 +1,417 @@
+2023-05-10 07:13:17,361 INFO    StreamThr :15264 [internal.py:wandb_internal():86] W&B internal server running at pid: 15264, started at: 2023-05-10 07:13:17.360118
+2023-05-10 07:13:17,361 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: status
+2023-05-10 07:13:17,362 INFO    WriterThread:15264 [datastore.py:open_for_write():85] open: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\run-56n18tui.wandb
+2023-05-10 07:13:17,364 DEBUG   SenderThread:15264 [sender.py:send():375] send: header
+2023-05-10 07:13:17,401 DEBUG   SenderThread:15264 [sender.py:send():375] send: run
+2023-05-10 07:13:18,142 INFO    SenderThread:15264 [dir_watcher.py:__init__():219] watching files in: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files
+2023-05-10 07:13:18,142 INFO    SenderThread:15264 [sender.py:_start_run_threads():1124] run started: 56n18tui with start time 1683682997.361118
+2023-05-10 07:13:18,142 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:18,142 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:18,142 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: check_version
+2023-05-10 07:13:18,142 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: check_version
+2023-05-10 07:13:18,405 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: run_start
+2023-05-10 07:13:18,427 DEBUG   HandlerThread:15264 [system_info.py:__init__():31] System info init
+2023-05-10 07:13:18,427 DEBUG   HandlerThread:15264 [system_info.py:__init__():46] System info init done
+2023-05-10 07:13:18,427 INFO    HandlerThread:15264 [system_monitor.py:start():181] Starting system monitor
+2023-05-10 07:13:18,427 INFO    SystemMonitor:15264 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-05-10 07:13:18,427 INFO    HandlerThread:15264 [system_monitor.py:probe():201] Collecting system info
+2023-05-10 07:13:18,427 INFO    SystemMonitor:15264 [interfaces.py:start():190] Started cpu monitoring
+2023-05-10 07:13:18,427 INFO    SystemMonitor:15264 [interfaces.py:start():190] Started disk monitoring
+2023-05-10 07:13:18,427 INFO    SystemMonitor:15264 [interfaces.py:start():190] Started gpu monitoring
+2023-05-10 07:13:18,446 INFO    SystemMonitor:15264 [interfaces.py:start():190] Started memory monitoring
+2023-05-10 07:13:18,462 INFO    SystemMonitor:15264 [interfaces.py:start():190] Started network monitoring
+2023-05-10 07:13:18,462 DEBUG   HandlerThread:15264 [system_info.py:probe():195] Probing system
+2023-05-10 07:13:18,462 DEBUG   HandlerThread:15264 [system_info.py:_probe_git():180] Probing git
+2023-05-10 07:13:18,477 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:18,557 DEBUG   HandlerThread:15264 [system_info.py:_probe_git():188] Probing git done
+2023-05-10 07:13:18,557 DEBUG   HandlerThread:15264 [system_info.py:probe():240] Probing system done
+2023-05-10 07:13:18,557 DEBUG   HandlerThread:15264 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.3', 'heartbeatAt': '2023-05-10T01:43:18.462233', 'startedAt': '2023-05-10T01:43:17.349156', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'c:\\ai_sem_7\\Courses\\Deep Learning\\deep-learning\\project\\sparsernn\\main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/shrivastava95/sparsernn.git', 'commit': 'c5d607afacb0a78f19f9e41f2f832006410675f1'}, 'email': 'shrivastava.9@iitj.ac.in', 'root': 'C:/ai_sem_7/Courses/Deep Learning/deep-learning/project/sparsernn', 'host': 'ishaan', 'username': 'ishaa', 'executable': 'C:\\Users\\ishaa\\AppData\\Local\\Programs\\Python\\Python311\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 2566.0, 'min': 0.0, 'max': 3201.0}, 'cpu_freq_per_core': [{'current': 2566.0, 'min': 0.0, 'max': 3201.0}], 'disk': {'total': 456.83202743530273, 'used': 415.3654479980469}, 'gpu': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 15.237815856933594}}
+2023-05-10 07:13:18,557 INFO    HandlerThread:15264 [system_monitor.py:probe():211] Finished collecting system info
+2023-05-10 07:13:18,557 INFO    HandlerThread:15264 [system_monitor.py:probe():214] Publishing system info
+2023-05-10 07:13:18,559 DEBUG   HandlerThread:15264 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-05-10 07:13:18,560 DEBUG   HandlerThread:15264 [system_info.py:_save_pip():67] Saving pip packages done
+2023-05-10 07:13:18,564 INFO    HandlerThread:15264 [system_monitor.py:probe():216] Finished publishing system info
+2023-05-10 07:13:18,572 DEBUG   SenderThread:15264 [sender.py:send():375] send: files
+2023-05-10 07:13:18,572 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-05-10 07:13:18,582 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-10 07:13:18,582 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: stop_status
+2023-05-10 07:13:18,912 DEBUG   SenderThread:15264 [sender.py:send():375] send: telemetry
+2023-05-10 07:13:19,153 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_created():278] file/dir created: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\requirements.txt
+2023-05-10 07:13:19,153 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_created():278] file/dir created: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:19,153 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_created():278] file/dir created: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-metadata.json
+2023-05-10 07:13:19,153 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_created():278] file/dir created: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:19,682 INFO    wandb-upload_0:15264 [upload_job.py:push():137] Uploaded file C:\Users\ishaa\AppData\Local\Temp\tmpupn78y60wandb\46x59tdo-wandb-metadata.json
+2023-05-10 07:13:20,527 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:20,962 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:21,164 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:21,273 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:21,274 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:21,274 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:21,276 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:21,606 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:21,606 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:21,607 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:21,607 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:21,879 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:21,880 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:21,880 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:21,881 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:22,181 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:22,256 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:22,256 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:22,256 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:22,256 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:22,549 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:22,549 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:22,549 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:22,549 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: status_report
+2023-05-10 07:13:22,549 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:22,549 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:22,814 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:22,814 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:22,814 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:22,814 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:23,096 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:23,097 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:23,097 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:23,097 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:23,194 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:23,194 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:23,361 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:23,370 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:23,370 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:23,371 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:23,745 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:23,745 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:23,746 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:23,746 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:24,024 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:24,025 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:24,025 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:24,025 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:24,194 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:24,364 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:24,365 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:24,365 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:24,366 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:24,635 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:24,869 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:24,870 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:24,870 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:24,871 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:25,176 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:25,177 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:25,177 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:25,178 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:25,195 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:25,196 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:25,487 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:25,488 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:25,488 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:25,489 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:25,881 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:25,882 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:25,882 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:25,883 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:26,179 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:26,180 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:26,180 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:26,180 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:26,196 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:26,556 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:26,556 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:26,556 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:26,572 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:26,651 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:26,924 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:26,924 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:26,924 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:26,924 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:27,205 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:27,205 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:27,205 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:27,205 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:27,205 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:27,205 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:27,513 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:27,513 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:27,513 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:27,513 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:27,775 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:27,775 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:27,775 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:27,775 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: status_report
+2023-05-10 07:13:27,775 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:28,043 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:28,043 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:28,043 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:28,043 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:28,213 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:28,325 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:28,325 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:28,325 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:28,330 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:28,620 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:28,620 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:28,620 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:28,620 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:28,674 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:28,873 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:28,873 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:28,873 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:28,873 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:29,157 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:29,157 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:29,157 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:29,160 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:29,220 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:29,221 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:29,441 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:29,441 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:29,441 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:29,450 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:29,722 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:29,722 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:29,722 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:29,722 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:29,995 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:29,996 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:29,997 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:29,997 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:30,227 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:30,275 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:30,275 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:30,275 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:30,275 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:30,561 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:30,561 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:30,561 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:30,561 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:30,702 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:30,855 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:30,856 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:30,856 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:30,858 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:31,135 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:31,136 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:31,136 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:31,137 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:31,235 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:31,235 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:31,578 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:31,579 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:31,579 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:31,579 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:31,977 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:31,977 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:31,977 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:31,989 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:32,240 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:32,279 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:32,280 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:32,280 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:32,280 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:32,563 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:32,563 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:32,563 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:32,571 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:32,720 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:32,845 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:32,845 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:32,845 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:32,845 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: status_report
+2023-05-10 07:13:32,845 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:33,129 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:33,129 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:33,130 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:33,130 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:33,250 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:33,251 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:33,418 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:33,418 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:33,419 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:33,419 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:33,596 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: stop_status
+2023-05-10 07:13:33,597 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: stop_status
+2023-05-10 07:13:33,709 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:33,922 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:33,922 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:33,922 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:33,997 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:33,998 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:33,998 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:33,999 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:34,260 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:34,277 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:34,278 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:34,278 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:34,279 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:34,564 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:34,565 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:34,565 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:34,566 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:34,738 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:34,851 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:34,852 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:34,852 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:34,853 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:35,126 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:35,127 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:35,127 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:35,128 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:35,262 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:35,263 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:35,498 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:35,499 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:35,499 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:35,500 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:35,947 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:35,947 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:35,947 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:35,947 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:36,238 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:36,238 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:36,238 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:36,238 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:36,266 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:36,523 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:36,523 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:36,523 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:36,523 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:36,765 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:36,790 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:36,790 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:36,790 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:36,802 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:37,058 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:37,058 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:37,058 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:37,058 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:37,276 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:37,276 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:37,323 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:37,323 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:37,323 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:37,338 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:37,613 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:37,613 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:37,613 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:37,622 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:37,874 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:37,889 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:37,889 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:37,889 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: status_report
+2023-05-10 07:13:37,889 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:38,159 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:38,159 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:38,159 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:38,159 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:38,281 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:38,505 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:38,505 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:38,505 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:38,505 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:38,769 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:38,778 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:38,778 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:38,778 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:38,782 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:39,040 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:39,040 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:39,040 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:39,046 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:39,299 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:39,299 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:39,315 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:39,315 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:39,315 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:39,322 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:39,595 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:39,595 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:39,600 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:39,600 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:39,864 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:39,864 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:39,864 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:39,864 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:40,187 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:40,187 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:40,187 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:40,187 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:40,315 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:40,460 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:40,460 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:40,460 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:40,460 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:40,742 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:40,742 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:40,742 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:40,752 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:40,805 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:41,073 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:41,073 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:41,073 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:41,085 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:41,325 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:41,325 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:41,342 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:41,357 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:41,357 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:41,357 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:41,692 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:41,692 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:41,692 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:41,692 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:41,965 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:41,965 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:41,965 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:41,965 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:42,257 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:42,257 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:42,257 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:42,272 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:42,335 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:42,756 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:42,756 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:42,756 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:42,756 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:42,832 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:43,048 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:43,048 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:43,049 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:43,049 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: status_report
+2023-05-10 07:13:43,049 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:43,340 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:43,340 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
+2023-05-10 07:13:43,405 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:43,405 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:43,405 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:43,405 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:43,692 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:43,692 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:43,692 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:43,692 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:43,956 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:43,956 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:43,956 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:43,956 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:44,237 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:44,238 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:44,238 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:44,239 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:44,345 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:44,510 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:44,511 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:44,511 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:44,512 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:44,856 ERROR   gpu       :15264 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-05-10 07:13:44,991 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:44,992 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:44,992 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:44,992 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:45,311 DEBUG   HandlerThread:15264 [handler.py:handle_request():144] handle_request: partial_history
+2023-05-10 07:13:45,312 DEBUG   SenderThread:15264 [sender.py:send():375] send: history
+2023-05-10 07:13:45,312 DEBUG   SenderThread:15264 [sender.py:send_request():402] send_request: summary_record
+2023-05-10 07:13:45,313 INFO    SenderThread:15264 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-05-10 07:13:45,349 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\wandb-summary.json
+2023-05-10 07:13:45,350 INFO    Thread-16 :15264 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\ai_sem_7\Courses\Deep Learning\deep-learning\project\sparsernn\wandb\run-20230510_071317-56n18tui\files\output.log
