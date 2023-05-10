@@ -42,7 +42,7 @@ def main(args):
         model = SparseRNN(**SparseRNN_kwargs).to(device)
     elif args.model == 'vanillalstm':
         SparseRNN_kwargs = {
-            # 'sequence_length': input_lang.max_length + 2,
+
             'embedding_dims': args.embedding_dims,
             'vocab_size': input_lang.n_words,   ### edit this
             'num_classes': 2 if args.dataset == 'sentiment' else 482,     ### edit this (or not)
@@ -51,7 +51,7 @@ def main(args):
         model = EncoderLSTM(**SparseRNN_kwargs).to(device)
     elif args.model == 'rnn':
         SparseRNN_kwargs = {
-            # 'sequence_length': input_lang.max_length + 2,
+
             'embedding_dims': args.embedding_dims,
             'vocab_size': input_lang.n_words,   ### edit this
             'num_classes': 2 if args.dataset == 'sentiment' else 482,     ### edit this (or not)
@@ -63,9 +63,6 @@ def main(args):
 
 
 
-
-    # sequences = torch.ones(batch_size, C*H*W, num_tokens).to(device)
-    # model(sequences).shape
 
     #build optimizer
     criterion = nn.CrossEntropyLoss()
@@ -205,7 +202,6 @@ if __name__ == '__main__':
 
     #models
     parser.add_argument('--model', default='sparsernn', choices=['sparsernn','rnn','vanillalstm'])
-    # parser.add_argument('--maxsize', type=int)           # maximum sequence length to which sequences are padded.
     parser.add_argument('--embedding_dims', default=64, type=int)     # embedding size for the model internals
 
     #optimization
