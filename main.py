@@ -3,6 +3,7 @@ import torch.optim as optim
 
 from models.sparsernn import SparseRNN
 from models.vanillalstm import EncoderLSTM
+from models.rnn import EncoderRNN
 import warnings
 from datasets import build_dataset
 import torch.nn as nn
@@ -49,7 +50,14 @@ def main(args):
         }
         model = EncoderLSTM(**SparseRNN_kwargs).to(device)
     elif args.model == 'rnn':
-        pass
+        SparseRNN_kwargs = {
+            # 'sequence_length': input_lang.max_length + 2,
+            'embedding_dims': args.embedding_dims,
+            'vocab_size': input_lang.n_words,   ### edit this
+            'num_classes': 2 if args.dataset == 'sentiment' else 482,     ### edit this (or not)
+            'hidden_state_sizes': hidden_state_sizes,  ### hyperparameter
+        }
+        model = EncoderRNN(**SparseRNN_kwargs).to(device)
     else:
         assert(1==2) # model passed was not permissible. check the args.
 
