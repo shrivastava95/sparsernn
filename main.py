@@ -2,6 +2,7 @@ import torch
 import torch.optim as optim
 
 from models.sparsernn import SparseRNN
+from models.vanillalstm import EncoderLSTM
 import warnings
 from datasets import build_dataset
 import torch.nn as nn
@@ -26,14 +27,35 @@ def main(args):
     train_loader, test_loader, input_lang, output_lang = build_dataset(dataset_name=args.dataset, test_size=args.test_size, batch_size=args.batch_size)
 
     #build model
-    SparseRNN_kwargs = {
-        'sequence_length': input_lang.max_length + 2, ### edit this
-        'embedding_dims': args.embedding_dims,   ### hyperparamater
-        'vocab_size': input_lang.n_words,   ### edit this
-        'num_classes': 2,     ### edit this (or not)
-        'hidden_state_sizes': hidden_state_sizes,  ### hyperparameter
-    }
-    model = SparseRNN(**SparseRNN_kwargs).to(device)
+    # ['sparsernn','rnn','vanillalstm']
+    SparseRNN_kwargs = {}
+
+    if args.model == 'sparsernn':
+        SparseRNN_kwargs = {
+            'sequence_length': input_lang.max_length + 2, ### edit this
+            'embedding_dims': args.embedding_dims,   ### hyperparamater
+            'vocab_size': input_lang.n_words,   ### edit this
+            'num_classes': 2 if args.dataset == 'sentiment' else 482,     ### edit this (or not)
+            'hidden_state_sizes': hidden_state_sizes,  ### hyperparameter
+        }
+        model = SparseRNN(**SparseRNN_kwargs).to(device)
+    elif args.model == 'vanillalstm':
+        SparseRNN_kwargs = {
+            # 'sequence_length': input_lang.max_length + 2,
+            'embedding_dims': args.embedding_dims,
+            'vocab_size': input_lang.n_words,   ### edit this
+            'num_classes': 2 if args.dataset == 'sentiment' else 482,     ### edit this (or not)
+            'hidden_state_sizes': hidden_state_sizes,  ### hyperparameter
+        }
+        model = EncoderLSTM(**SparseRNN_kwargs).to(device)
+    elif args.model == 'rnn':
+        pass
+    else:
+        assert(1==2) # model passed was not permissible. check the args.
+
+
+
+
     # sequences = torch.ones(batch_size, C*H*W, num_tokens).to(device)
     # model(sequences).shape
 
@@ -47,7 +69,7 @@ def main(args):
 
     wandb.init(
         project="DL PROJECT",
-        name = f"SparseRNN {args.dataset.capitalize()}",
+        name = f"{args.model.capitalize().replace('rnn', 'RNN')} {args.dataset.capitalize()}",
         config = {
             "epochs": args.epochs,
             "batch_size": args.batch_size,
@@ -61,6 +83,9 @@ def main(args):
 
     #train model
     losses = []
+    
+    test_accuracies = 0.0
+    test_losses     = 1.0
     for epoch in range(args.epochs):
         model.train()
         for i, (sequences, labels) in enumerate(tqdm(train_loader)):
@@ -76,8 +101,9 @@ def main(args):
                 if loss.item() > 1:
                     continue
             elif args.dataset == 'pos':
-                labels = labels.reshape9([-1])
-                scores = model(sequences).reshape([-1, 2])
+                scores = model(sequences)
+                labels = labels.reshape([-1])
+                scores = model(sequences).reshape([-1, 482])
                 preds = scores.argmax(dim=1)
                 correct = int(sum(preds == labels))
                 total = int(labels.shape[0])
@@ -89,7 +115,7 @@ def main(args):
             optimizer.step()
             losses.append(loss.item())
 
-            wandb.log({"Train Loss":loss.item(),"Train Accuracy":accuracy}, step=epoch*len(train_loader) + i)
+            wandb.log({"Train Loss":loss.item(),"Train Accuracy":accuracy, 'Test Loss':test_losses, "Test Accuracy":test_accuracies}, step=epoch*len(train_loader) + i)
             
             if type_scheduler == 'warmup':
                 scheduler.step()
@@ -116,23 +142,31 @@ def main(args):
                 test_sizes.append(size)
             elif args.dataset == 'pos':
                 scores = model(sequences)
+                labels = labels.reshape([-1])
+                scores = model(sequences).reshape([-1, 482])
                 preds = scores.argmax(dim=1)
                 correct = int(sum(preds == labels))
                 total = int(labels.shape[0])
                 accuracy = float(correct / total) * 100
-                loss = criterion(scores, labels).detach().item()
+                loss = criterion(scores, labels).item()
                 size = labels.shape[0]
                 test_accuracies.append(accuracy)
                 test_losses.append(loss)
                 test_sizes.append(size)
-    
+
         test_accuracies = np.array(test_accuracies)
         test_losses = np.array(test_losses)
         test_sizes = np.array(test_sizes)
-        test_accuracies = sum( test_accuracies * test_sizes ) / sum(test_sizes)
-        test_losses     = sum( test_losses     * test_sizes ) / sum(test_sizes)
-        wandb.log({"Test Loss":test_losses,"Test Accuracy":test_accuracies}, step=epoch+1)
-
+        test_accuracies = float(sum( test_accuracies * test_sizes ) / sum(test_sizes))
+        test_losses     = float(sum( test_losses     * test_sizes ) / sum(test_sizes))
+        print(test_accuracies, test_losses)
+        torch.save(
+            {
+                'state_dict': model.state_dict(),
+                'model_kwargs': SparseRNN_kwargs
+            },
+            f'results_{args.dataset}_{args.model}.pt'
+        )
     wandb.finish()
 
 
@@ -162,7 +196,7 @@ if __name__ == '__main__':
     parser.add_argument('--dataset', default='sentiment', choices=['pos', 'sentiment'])
 
     #models
-    parser.add_argument('--model', default='sparsernn', choices=['sparsernn','rnn','sparsernn_seqtoseq','rnn_seqtoseq'])
+    parser.add_argument('--model', default='sparsernn', choices=['sparsernn','rnn','vanillalstm'])
     # parser.add_argument('--maxsize', type=int)           # maximum sequence length to which sequences are padded.
     parser.add_argument('--embedding_dims', default=64, type=int)     # embedding size for the model internals
 
