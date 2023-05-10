@@ -2,3 +2,4 @@
 /corpora/
 IMDB Dataset.csv
 results/*
+wandb/*
