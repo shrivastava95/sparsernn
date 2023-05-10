@@ -76,6 +76,7 @@ def main(args):
                 if loss.item() > 1:
                     continue
             elif args.dataset == 'pos':
+                scores = model(sequences)
                 labels = labels.reshape9([-1])
                 scores = model(sequences).reshape([-1, 2])
                 preds = scores.argmax(dim=1)
@@ -116,11 +117,13 @@ def main(args):
                 test_sizes.append(size)
             elif args.dataset == 'pos':
                 scores = model(sequences)
+                labels = labels.reshape9([-1])
+                scores = model(sequences).reshape([-1, 2])
                 preds = scores.argmax(dim=1)
                 correct = int(sum(preds == labels))
                 total = int(labels.shape[0])
                 accuracy = float(correct / total) * 100
-                loss = criterion(scores, labels).detach().item()
+                loss = criterion(scores, labels).item()
                 size = labels.shape[0]
                 test_accuracies.append(accuracy)
                 test_losses.append(loss)
@@ -131,8 +134,14 @@ def main(args):
         test_sizes = np.array(test_sizes)
         test_accuracies = sum( test_accuracies * test_sizes ) / sum(test_sizes)
         test_losses     = sum( test_losses     * test_sizes ) / sum(test_sizes)
-        wandb.log({"Test Loss":test_losses,"Test Accuracy":test_accuracies}, step=epoch+1)
-
+        wandb.log((test_losses, test_accuracies))
+        torch.save(
+            {
+                'state_dict': model.state_dict(),
+                'model_kwargs': SparseRNN_kwargs
+            },
+            f'results_{args.dataset}.pt'
+        )
     wandb.finish()
 
 
