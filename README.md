@@ -1,6 +1,15 @@
 # sparsernn
 
-Repository for the main course project on a new sequence modelling architecture called SparseRNN, for the DL2023 course, semester VI.
+An efficient RNN-inspired sequence modelling architecture called SparseRNN, which employs dilation to reduce the cost of dense-recurrence without compromising on performance.
+
+This was made as the final course project for the Deep Learning\[DL2023\] course at Indian Institute of Technology, Jodhpur. 
+
+## Research Report & Demo Video
+
+The [research report(link)](sparsernn-report.pdf) contains in-depth explanations of our research and the results obtained on three benchmarks.
+
+Refer to the [demo video(link)](sparseRNN-demo-video.mp4) for a barebones presentation and commentary on our work.
+
 
 ## Requirements
 - Python >= 3.6
