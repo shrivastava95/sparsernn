@@ -170,7 +170,7 @@ def main(args):
                 'state_dict': model.state_dict(),
                 'model_kwargs': SparseRNN_kwargs
             },
-            f'results_{args.dataset}_{args.model}.pt'
+            f'results/results_{args.dataset}_{args.model}.pt'
         )
     wandb.finish()
 

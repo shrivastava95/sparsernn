@@ -1,5 +1,4 @@
 
-/corpora/
-IMDB Dataset.csv
-results/*
+# /corpora/
+# results/*
 wandb/*
